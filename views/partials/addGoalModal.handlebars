@@ -1,0 +1,44 @@
+<!-- Modal -->
+<div class="modal fade" id="addGoalModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add new Goal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="add__Goal">
+        <div class="modal-body">
+
+          <div class="add__Goal-Msg">
+            {{!-- Error Messages Will Show Here --}}
+          </div>
+
+          <div class="form-group">
+            <label for="goal">Goal Title</label>
+            <input type="name" class="form-control" id="goalTitle" name="goalTitle"  placeholder="I want to make a Snowman." required>
+          </div>
+          <div class="form-group">
+            <label for="goalCategory">Goal Category</label>
+            <select class="form-control" id="goalCategory" name="goalCategory">
+              <option>Private</option>
+              <option>Athletic</option>
+              <option>Financial</option>
+              <option>Personal</option>
+              <option>Career</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="goalDescription">Goal Description</label>
+            <textarea class="form-control" id="goalDescription" name="goalDescription" rows="3"></textarea>
+          </div>
+        </div>
+        <input type="hidden" name="goalUserId" id="addGoalUserId" value="">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary add__Goal-Btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

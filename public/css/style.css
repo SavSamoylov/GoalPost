@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+body{
+  background: #fafafa;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container{
+  width:1010px;
+}
+
+a, a:hover{
+  text-decoration: none;
+}
+
+.content-wrap{
+  position: relative;
+  padding:0 20px;
+}
+
+.header{
+  width:100%;
+  height:70px;
+  line-height: 70px;
+  position: absolute;
+  z-index:1;
+  color:#fff;
+  background:#ffffff;
+  position: relative;
+  float:left;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.header a{
+  color: #797979;
+}
+
+.header a:hover{
+  color: #525151;
+}
+
+.header__logo-mark{
+  float:left;
+}
+
+.header__logo-mark h1{
+  font-weight:normal;
+  font-size:24px;
+  line-height: 70px;
+  font-family:'Righteous', cursive;
+}
+
+.header__nav{
+  float:right;
+}
+
+.header__nav a{
+  float:left;
+  font-weight:600;
+  text-transform: uppercase;
+  font-size:14px;
+  margin-right:20px;
+}
+
+.header__nav a:hover{
+  color:#525151;
+  transition: .2s;
+}
+
+a.header__btn-action{
+  position: relative;
+  float: none;
+  background:#ef5335;
+  padding:8px 30px;
+  border-radius:20px;
+  color:#ffffff;
+  margin-right: 0;
+  outline: none;
+}
+
+a.header__btn-action:hover{
+  background: #d83617;
+  border-bottom: none;
+  padding:8px 30px;
+  color:#fff;
+  outline: none;
+}
+
+.header__nav-UserDropdown{
+  float:left;
+}
+
+.header__nav-UserDropdown .dropdown-menu a{
+  line-height:normal;
+  color: #1d1d1d;
+  text-transform: none;
+}
+
+.header__nav-UserImage{
+  position: relative;
+  float:left;
+  top:22px;
+  margin-right: 10px;
+  background:#aaa1ef;
+  height:25px;
+  width:25px;
+  border-radius: 25px;
+}
+
+.header__nav-UserImage .initials{
+  position:relative;
+  font-weight:600;
+  font-size:12px;
+  color:#ffffff;
+  line-height: 24px;
+  text-align: center;
+}
+
+.fp__hero{
+  position: relative;
+  height:370px;
+  background: #2a299c;
+  background-image: url('../imgs/heroimg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fp__hero-message{
+  float: left;
+  position: relative;
+  width: 100%;
+  color:#fff;
+  text-align:center;
+}
+
+.fp__hero-message h4{
+  padding:120px 0 0;
+  font-weight: 300;
+}
+
+.fp__hero-registration, .fp__hero-login{
+  position: absolute;
+  width:60%;
+  height:411px;
+  background: #fff;
+  margin:auto;
+  left:0; right:0;
+  top:200px;
+  -webkit-box-shadow:  0px 2px 3px #dedede;
+  box-shadow:  0px 2px 3px #bfbfbf;
+  border-bottom: 2px solid #dedede;
+  margin-bottom: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.registration__form, .login__form{
+  float:left;
+  width:60%;
+  height:100%;
+  padding:30px;
+}
+
+.registration__form legend, .login__form legend{
+  font-size:16px;
+  font-weight:600;
+}
+
+.registration__img, .login__img{
+  float: left;
+  width:40%;
+  height: 100%;
+  overflow:hidden;
+}
+
+.registration__img img, .login__img img{
+
+  height: 100%;
+}
+
+.reglog-span{
+  margin-left:20px;
+}
+
+.absoluteAlert{
+  position:relative;
+  z-index:5;
+  margin-bottom:0;
+}
+
+.dropdown-item{
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.profile__Goal-Area{
+  position: relative;
+  float: left;
+  width:610px;
+  padding-bottom: 70px;
+}
+
+.profile__Goal-AreaEmptyState{
+  text-align: center;
+  font-weight: 500;
+  color: #999999;
+}
+
+.profile__Goal, .discover__Goal{
+  background:#fff;
+  margin-bottom:30px;
+  border: 1px solid #e6e7eb;
+  border-radius: 5px
+}
+
+.profile__Goal-Header, .discover__Goal-Header{
+  padding:10px 20px;
+  border-bottom:1px solid #eee;
+}
+
+.profile__Goal-AuthorImage, .discover__Goal-AuthorImage{
+  position: relative;
+  float:left;
+  text-align:center;
+  font-size:12px;
+  line-height: 35px;
+  margin-right: 10px;
+  background:#aaa1ef;
+  height:35px;
+  width:35px;
+  border-radius: 25px;
+  color:#ffffff;
+}
+
+.profile__Goal-AuthorInfoBlock, .discover__Goal-AuthorInfoBlock{
+  position: relative;
+  float: left;
+  line-height: 1rem;
+}
+
+.profile__Goal-Created, .discover__Goal-Created{
+  font-weight:normal;
+  font-size:12px;
+}
+
+
+.goal__Options{
+  position: relative;
+  float: right;
+  cursor: pointer;
+  display: none;
+}
+
+.goal__Options .dropdown-toggle:after{
+  display:none;
+}
+
+.profile__Goal-TitleBlock, .discover__Goal-TitleBlock{
+  background: #f4f4f4;
+  padding:30px 20px;
+}
+
+a.profile__Goal-Title, a.discover__Goal-Title{
+  float:left;
+  color:#fff;
+  text-shadow: 0px 1px 1px #757575 ;
+  font-weight:600;
+  font-size:1.2rem;
+}
+
+
+.profile__Goal-Author, .discover__Goal-Author{
+  position: relative;
+  float: left;
+  font-weight:600;
+  font-size:14px;
+}
+
+.profile__Goal-Info, .discover__Goal-Info{
+  font-size:14px;
+  color:#808080;
+  line-height: 30px;
+  border:none;
+  border-bottom: 1px solid #e6e7eb;
+  border-radius: 0;
+}
+
+.profile__Goal-InfoHeading, .discover__Goal-InfoHeading{
+  padding:10px 20px;
+}
+
+.profile__Goal-InfoHeading a, .discover__Goal-InfoHeading a{
+  color: #797979;
+}
+
+.profile__Goal-InfoHeading a:hover, .discover__Goal-InfoHeading a:hover{
+  color: #1d1d1d;
+}
+
+.profile__Goal-CompleteButton, .discover__Goal-CompleteButton{
+  background: none;
+  border: 1px solid #d6d6d6;
+  color: #797979;
+  outline: none;
+  cursor:pointer;
+}
+
+.profile__Goal-CompleteButton:hover, .discover__Goal-CompleteButton:hover{
+  background: #f7f7f7;
+}
+
+.completed-goal{
+  background:#6e95a9;
+  color: #ffffff;
+}
+
+.completed-goal:hover{
+  background: #6e95a9;
+}
+
+.profile__Goal-TaskAdd, .discover__Goal-TaskAdd{
+  padding:10px 20px 10px;
+  background: #f7f7f7;
+  border-top: 1px solid #e5e5e5;
+}
+
+.profile__Goal-Tasks, .discover__Goal-Tasks{
+  padding: 10px 20px;
+  background: #f7f7f7;
+}
+
+.profile__Goal-Task, .profile__Goal-Tasks, .profile__Goal-Task:first-child {
+  border-radius: 0;
+}
+
+.profile__Goal-Task:last-child{
+  margin-bottom:10px;
+}
+
+.task__Add-Form textarea{
+  resize: none;
+}
+
+.profile__User-Area{
+  position: relative;
+  float: right;
+  width: 300px;
+}
+
+.profile__User-Card{
+  position: relative;
+  float: right;
+  width: 270px;
+  background: #fff;
+  border: 1px solid #e6e7eb;
+  border-bottom: 2px solid #e6e7eb;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.profile__User-Avatar{
+  position: relative;
+  background-image: url(/imgs/userProfileBg.png);
+  padding:10px 0;
+}
+
+.profile__User-AvatarImage{
+  width:75px;
+  height:75px;
+  border-radius: 75px;
+  line-height:60px;
+  font-weight:500;
+  margin:auto;
+  text-align:center;
+  color:#fff;
+  border: 7px solid #ffffff;
+  -webkit-box-shadow: 0px 2px 5px #999999;
+  box-shadow: 0px 2px 5px #999999;
+}
+
+.profile__User-Edit{
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  line-height: 25px;
+  background: #ffffff;
+  position: absolute;
+  bottom: 15px;
+  left: 65%;
+  font-size: 15px;
+  -webkit-box-shadow: 0px 2px 5px #999999;
+  box-shadow: 0px 2px 5px #999999;
+  display:none;
+  transition: .2s;
+}
+
+
+.profile__User-Name{
+  font-weight:500;
+  padding: 10px 0 5px;
+}
+
+.profile__User-Location{
+  font-size:14px;
+  padding: 5px 0;
+
+}
+
+.profile__User-Bio{
+  text-align: left;
+  font-size:14px;
+  padding:10px 20px 20px;
+}
+
+.profile__User-Stats{
+  background: #f7f7f7;
+  padding: 10px;
+  border-top: 1px solid #e5e5e5;
+  font-size: 14px;
+  font-weight: 500;
+  color: #797979;
+}
+
+.profile__User-StatsGoals{
+  border-right:1px solid #cacaca;
+}
+
+.profile__Content, .account__Content, .discover__Content{
+  position: relative;
+  float:left;
+  width:100%;
+  margin-top:50px;
+}
+
+.goal__Header{
+  position: relative;
+  padding: 30px;
+  float: left;
+  width: 100%;
+}
+
+.goal__Header-GoalAuthor{
+  display: block;
+}
+
+.goal__Header-GoalAuthorImage{
+  position: relative;
+  float:left;
+  text-align:center;
+  font-size: 15px;
+  -webkit-box-shadow: 0px 2px 5px #757575;
+  box-shadow: 0px 2px 5px #757575;
+  font-weight:500;
+  line-height: 55px;
+  margin-right: 10px;
+  background:#aaa1ef;
+  height:65px;
+  width:65px;
+  border-radius: 65px;
+  border:5px solid #ffffff;
+  color:#ffffff;
+  margin-right:20px;
+}
+
+.goal__Header-GoalAuthorInfo{
+  position: relative;
+  float: left;
+  line-height: 1.6rem;
+}
+
+
+.goal__Header-GoalAuthorName{
+  position: relative;
+  float: left;
+}
+
+.goal__Header-GoalAuthorName a{
+  font-size:18px;
+  color:#ffffff;
+  font-weight:500;
+  opacity: .75;
+}
+
+.goal__Header-GoalAuthorName a:hover{
+  opacity:1;
+}
+
+.goal__Header-GoalCreated{
+  color:#f1f1f1;
+}
+
+.goal__Header-GoalTitle{
+  float:left;
+  color:#fff;
+  text-shadow: 0px 1px 1px #757575 ;
+  font-weight:600;
+  font-size:1.7rem;
+  width:100%;
+  padding:50px 0;
+}
+
+.goal__Content{
+  position: relative;
+  float:left;
+  width:100%;
+  margin-top:50px;
+}
+
+.goal__Task-Area{
+  position: absolute;
+  float: left;
+  width:610px;
+  margin-bottom: 70px;
+  border: 1px solid #e6e7eb;
+  border-radius: 5px;
+  top:-145px;
+  border-top:2px solid #dddddd;
+  border-bottom:2px solid #dddddd;
+  /*-webkit-box-shadow: 0px -2px 2px -1px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px -2px 2px -1px rgba(0, 0, 0, 0.32);*/
+}
+
+.goal__Sidebar-Area{
+  position: relative;
+  float: right;
+  width: 300px;
+}
+
+.goal__Description, .goal__Status{
+  position: relative;
+  float: right;
+  display: block;
+  width: 270px;
+  background: #fff;
+  border: 1px solid #e6e7eb;
+  border-bottom: 2px solid #e6e7eb;
+  border-radius: 5px;
+  padding:20px;
+  margin-bottom:30px;
+}
+
+.goal__Description i, .goal__Status i{
+  margin-right:15px;
+}
+
+.goal__Task-Add{
+  padding:10px 20px 10px;
+  background: #f7f7f7;
+  border-top: 1px solid #e5e5e5;
+}
+
+.goal__Task-Message{
+  background: #fff;
+  padding:20px;
+  border-bottom:1px solid #dedede;
+}
+
+.goal__Tasks{
+  padding: 10px 20px;
+  background: #f7f7f7;
+}
+
+.profile__Goal-Task, .profile__Goal-Tasks, .profile__Goal-Task:first-child {
+  border-radius: 0;
+}
+
+.profile__Goal-Task:last-child{
+  margin-bottom:10px;
+}
+
+.goal__Header-Options{
+  position: absolute;
+  right:40px;
+  display: none;
+}
+
+.goal__Header-OptionsButton{
+  background: none;
+  border:2px solid #fff;
+  color:#fff;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
+.account__Form-Area{
+  position: relative;
+  float: left;
+  width: 610px;
+  padding:20px;
+  background: #ffffff;
+  margin-bottom: 70px;
+  border: 1px solid #e6e7eb;
+  border-radius: 5px;
+  border-bottom:2px solid #e6e7eb;
+}
+
+.user__Profile-Header{
+  position: relative;
+  padding: 30px;
+  height: 200px;
+  float: left;
+  width: 100%;
+  background: url('../imgs/userProfileBG2.png');
+  background-size: cover;
+}
+
+.user__Profile-HeaderUserInfo{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 60px;
+  background: #ffffff;
+  border-bottom:2px solid #e6e7eb;
+  border-top:2px solid #e6e7eb;
+}
+
+.user__Profile-Avatar{
+  width:175px;
+  height:175px;
+  border-radius: 175px;
+  line-height:160px;
+  font-weight:500;
+  font-size:2rem;
+  text-align:center;
+  color:#fff;
+  border: 7px solid #ffffff;
+  -webkit-box-shadow: 0px 2px 5px #999999;
+  box-shadow: 0px 2px 5px #999999;
+  position: absolute;
+  bottom: -100%;
+  left: 75px;
+}
+
+.user__Profile-Stats{
+  margin-left:280px;
+}
+
+.user__Profile-Stats li{
+  display: inline;
+  line-height: 60px;
+  padding:0 20px;
+  font-weight:500;
+  color:#797979;
+}
+
+.user__Profile-GoalArea{
+  position: relative;
+  float:left;
+  width:700px;
+  margin-left:25%;
+  padding:50px 0;
+}
+
+
+.gradient-teal{
+  background: #46cda5;
+  background: -moz-linear-gradient(-45deg, #46cda5 19%, #3f75c5 91%, #3065b3 91%);
+  background: -webkit-linear-gradient(-45deg, #46cda5 19%,#3f75c5 91%,#3065b3 91%);
+  background: linear-gradient(135deg, #46cda5 19%,#3f75c5 91%,#3065b3 91%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#46cda5', endColorstr='#3065b3',GradientType=1 );
+}
+
+.gradient-auburn{
+  background: #d05b16;
+  background: -moz-linear-gradient(-45deg,  #d05b16 19%,#da0a0a 91%,#c50000 91%);
+  background: -webkit-linear-gradient(-45deg,  #d05b16 19%,#da0a0a 91%,#c50000 91%);
+  background: linear-gradient(135deg, #d05b16 19%,#da0a0a 91%,#c50000 91%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d05b16', endColorstr='#c50000',GradientType=1 );
+}
+
+.gradient-purple{
+  background: #3689c6;
+  background: -moz-linear-gradient(-45deg,  #3689c6 19%,#a076b6 91%,#895eab 91%);
+  background: -webkit-linear-gradient(-45deg,  #3689c6 19%,#a076b6 91%,#895eab 91%);
+  background: linear-gradient(135deg, #3689c6 19%,#a076b6 91%,#895eab 91%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3689c6', endColorstr='#895eab',GradientType=1 );
+}
+
+.gradient-green{
+  background: #32d245;
+  background: -moz-linear-gradient(-45deg,  #32d245 19%,#c5c72b 91%,#afb720 91%);
+  background: -webkit-linear-gradient(-45deg,  #32d245 19%,#c5c72b 91%,#afb720 91%);
+  background: linear-gradient(135deg, #32d245 19%,#c5c72b 91%,#afb720 91%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32d245', endColorstr='#afb720',GradientType=1 );
+}
+
+.gradient-fuschia{
+  background: #E91E63;
+  background: -moz-linear-gradient(-45deg,  #E91E63 19%,#ea77ff 91%,#e841f9 91%);
+  background: -webkit-linear-gradient(-45deg,  #E91E63 19%,#ea77ff 91%,#e841f9 91%);
+  background: linear-gradient(135deg, #E91E63 19%,#ea77ff 91%,#e841f9 91%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E91E63', endColorstr='#e841f9',GradientType=1 );
+}

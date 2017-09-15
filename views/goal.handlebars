@@ -1,0 +1,125 @@
+{{>header}}
+
+<div class="goal__Header gradient-{{goal.color}}" data-goal-author-id='{{goal.users_id}}'>
+  <div class="container">
+    <div class="content-wrap">
+
+
+      <div class="goal__Header-GoalTitle">
+        {{goal.title}}
+      </div>
+
+      <div class="goal__Header-GoalAuthor pull-right clearfix">
+        <div class="goal__Header-GoalAuthorImage" style="background-color:{{goal.users_color}}">
+          {{goal.users_initials}}
+        </div>
+        <div class="goal__Header-GoalAuthorInfo">
+          <div class="goal__Header-GoalAuthorName">
+            <a href="#/">{{goal.users_name}}</a>
+          </div>
+          <div class="goal__Header-GoalCreated">
+            Created {{goal.created}}
+          </div>
+        </div>
+      </div>
+
+      <div class="goal__Header-Options">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle goal__Header-OptionsButton btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Options
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item goal__Options-Edit" type="button" data-goal-author="{{goal.users_id}}" data-goal-id="{{goal.id}}">Edit</button>
+            <button class="dropdown-item goal__Header-OptionsDelete" type="button" data-delete-goal='{{goal.id}}' data-author-id='{{goal.users_id}}'>Delete</button>
+            <button type="button" class="dropdown-item profile__Goal-CompleteButton profile__Goal-CompleteButton-{{goal.id}} completed-goal" data-complete-goal-button={{goal.id}} data-author-id='{{goal.users_id}}' style="background: none;color: inherit;border: none;">
+              Complete Goal
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container content-container">
+
+  <div class="content-wrap ">
+
+    <div class="goal__Content clearfix">
+
+      <div class="goal__Task-Area clearfix" data-task-form-for-goal="{{goal.id}}" data-goal-author-id={{goal.users_id}}>
+
+        {{#if user.userActive}}
+
+        <div class="goal__Task-Add goal__Task-Add-{{goal.id}} clearfix">
+
+          <form class="goal__Task-Add-Form goal__Task-Add-Form-{{goal.id}}">
+            <div class="form-group">
+              <label for="addNewTask">Add New Task</label>
+              <textarea name="newTask" class="form-control newTask-{{goal.id}}" rows="2" data-new-task-for-goal="{{goal.id}}" required></textarea>
+            </div>
+            <span class='task__Add-Msg-{{goal.id}}'></span>
+            <button type="button" name="addNewTaskButton" class="btn btn-primary btn-sm pull-right addNewTaskButton" data-task-button-for-goal="{{goal.id}}" data-task-button-for-user="{{goal.users_id}}">Add Task</button>
+          </form>
+
+        </div>
+
+        {{else}}
+
+        <div class="goal__Task-Message">
+                   Do you want to add a task to {{goal.users_name}}'s goal? <a href="/users/signin">Sign-in</a> now!
+        </div>
+
+        {{/if}}
+
+        <ol class="goal__Tasks goal__Tasks-{{goal.id}} list-group" data-list-for-goal="{{goal.id}}">
+          {{!-- Task List --}}
+        </ol>
+
+
+
+      </div>
+      {{!-- End Goal Task Area --}}
+
+      <div class="goal__Sidebar-Area pull-right">
+
+        {{#if goal.completion_status}}
+
+          <div class="goal__Status">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Goal Status: Completed
+          </div>
+
+
+          {{else}}
+
+          <div class="goal__Status">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Goal Status: In progress
+          </div>
+
+        {{/if}}
+
+          <div class="goal__Description">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+              {{#if goal.description}}
+                {{goal.description}}
+                {{else}}
+                Goal doesn't have a description.
+              {{/if}}
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+{{>addGoalModal}}
+{{>updateGoalModal}}

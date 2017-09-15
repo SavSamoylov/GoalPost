@@ -1,0 +1,36 @@
+
+  <div class="fp__hero">
+    <div class="container-fluid">
+      <div class="content-wrap">
+        <div class="fp__hero-message">
+          <h4>Share your Goals. Share your Knowledge. Achieve more Together.</h4>
+        </div>
+        <div class="fp__hero-registration clearfix">
+          <div class="registration__form">
+            <legend>REGISTER</legend>
+            <form method="post" action="/api/register">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="name" class="form-control" id="registrationName" name="registrationName"  placeholder="Full Name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="registrationEmail" name="registrationEmail" placeholder="Enter email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="registrationPassword" name="registrationPassword" placeholder="Password" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary">REGISTER</button>
+              <span class="reglog-span"><a href="/users/signin">Sign In</a></span>
+            </form>
+          </div>
+          <div class="registration__img">
+            <img src="/imgs/regimg.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

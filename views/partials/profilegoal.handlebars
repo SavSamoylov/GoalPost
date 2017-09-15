@@ -1,0 +1,29 @@
+{{#if goal}}
+
+  {{#each goal}}
+
+     {{#unless completion_status}}
+       {{>profileInProgressGoal}}
+     {{/unless}}
+
+
+  {{/each}}
+
+  {{#each goal}}
+
+
+    {{#if completion_status}}
+      {{>profileCompletedGoal}}
+    {{/if}}
+
+  {{/each}}
+
+
+
+
+  {{else}}
+
+  <div class='profile__Goal-AreaEmptyState'>You haven't made any Goals yet. Let this be your first.
+  </br> <a href="#/" data-toggle="modal" data-target="#addGoalModal">Make a Goal.</a> </div>
+
+{{/if}}

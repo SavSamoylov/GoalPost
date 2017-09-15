@@ -1,0 +1,33 @@
+<div class="profile__User-Area">
+  <div class="profile__User-Card">
+    <div class="profile__User-Avatar">
+      {{#if user.userActive}}
+        <a href='/users/edit/{{user.id}}' class="profile__User-Edit">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </a>
+      {{/if}}
+      <div class="profile__User-AvatarImage">
+
+      </div>
+    </div>
+    <div class="profile__User-Name">
+
+    </div>
+    <div class="profile__User-Location">
+
+    </div>
+    <div class="profile__User-Bio">
+
+    </div>
+    <div class="profile__User-Stats">
+        <div class="row">
+          <div class="profile__User-StatsGoals col-6">
+            <span class="profile__User-StatsGoalsCount" data-goal-count=""></span>
+          </div>
+          <div class="profile__User-StatsFollowers col-6">
+            6 Followers
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

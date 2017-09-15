@@ -1,0 +1,29 @@
+{{>header}}
+
+<div class="user__Profile-Header">
+  <div class="user__Profile-HeaderUserInfo">
+      <div class="user__Profile-Avatar" style="background-color:{{user.color}}">
+        {{user.initials}}
+      </div>
+      <div class="user__Profile-Stats">
+        <ul class="list-unstyled">
+          <li class="">Goal Count {{goal_count}}</li>
+          <li class="">Followers 6</li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+<div class="user__Profile-GoalArea">
+
+  {{#if goal}}
+    {{#each goal}}
+    {{>profileInProgressGoal}}
+    {{/each}}
+  {{/if}}
+
+</div>
+
+
+
+{{>addGoalModal}}

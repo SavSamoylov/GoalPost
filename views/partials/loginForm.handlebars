@@ -1,0 +1,31 @@
+
+<div class="fp__hero">
+  <div class="container-fluid">
+    <div class="content-wrap">
+      <div class="fp__hero-message">
+        <h4>Share your Goals. Share your Knowledge. Achieve more Together.</h4>
+      </div>
+      <div class="fp__hero-login clearfix">
+        <div class="login__img">
+          <img src="/imgs/loginimg.png" alt="">
+        </div>
+        <div class="login__form">
+          <legend>SIGN IN</legend>
+          <form method="post" action='/api/signin'>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="loginEmail" name="loginEmail" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="loginPassword" name="loginPassword" placeholder="Password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">SIGN IN</button>
+            <span class="reglog-span"><a href="/">Register</a></span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

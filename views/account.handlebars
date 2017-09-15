@@ -1,0 +1,44 @@
+{{>header}}
+
+
+<div class="container">
+  <div class="content-wrap">
+
+    <div class="account__Content">
+
+      <div class="account__Form-Area">
+
+        <legend>Edit Account Information</legend>
+        <form>
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="name" class="form-control" id="updateName" name="updateName"  value="{{user.full_name}}" disabled required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="updateEmail" name="updateEmail" placeholder="Enter email" value="{{user.email}}"  required>          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="location" class="form-control" id="updateLocation" name="updateLocation" placeholder="Enter location" value="{{user.location}}">
+          </div>
+          <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea class="form-control" id="updateBio" name="updateBio" rows="3" >{{user.bio}}</textarea>
+          </div>
+
+
+          <button type="submit" class="btn btn-primary account__Update-Btn pull-right" data-user-id="{{user.id}}">UPDATE</button>
+        </form>
+
+      </div>
+
+        {{>profileUserArea}}
+
+    </div>
+
+
+  </div>
+
+</div>
+
+{{>addGoalModal}}
