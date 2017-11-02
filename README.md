@@ -4,7 +4,22 @@ This application will allow Users to create and share their Goals with other use
 
 ## The "Big" Idea
 
->> What if we could create a place where users would be able to Create, Share, and Collaborate on personal Goals with each other in order to achieve more faster. 
+>> What if we could create a place where users would be able to Create, Share, and Collaborate on personal Goals with each other in order to achieve more faster.
+
+## User Flows
+
+#### 1) Create Post
+![Alt text](/public/imgs/gpGif1.gif?raw=true "Create Post")
+
+#### 2) Private Dashboard, Public Post Page, and Create Tasks
+![Alt text](/public/imgs/gpGif2.gif?raw=true "Private Dashboard, Public Post Page, and Create Tasks")
+
+#### 3) Public Profile Page and Discovery Page
+![Alt text](/public/imgs/gpGif3.gif?raw=true "Public Profile Page and Discovery Page")
+
+#### 4) Edit Account Info
+![Alt text](/public/imgs/gpGif4.gif?raw=true "Edit Account Info")
+
 
 ## Tech Used
 
@@ -20,9 +35,9 @@ Server-side:
 - Passport for session authentication.
 - Morgan for HTTP logging.
 - Connect-Flash for sending feedback messages.
-- Express-Session, 
-- Cookie-Parser, 
-- Moment, 
+- Express-Session,
+- Cookie-Parser,
+- Moment,
 - etc.
 
 ## Future Development Roadmap
@@ -56,4 +71,3 @@ Server-side:
 - User will be able to provide "Status Updates" for each Goals. Kind of like a 'git commit'... but not.
 - User will be able to comment on other peoples Goals.
 - User can "watch"/"follow" other peoples Goals.
-
